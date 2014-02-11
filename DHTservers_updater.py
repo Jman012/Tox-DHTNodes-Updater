@@ -3,6 +3,7 @@
 import urllib.request
 import urllib.error
 import sys
+import os
 import time
 import threading
 
@@ -25,6 +26,10 @@ def spin(stop: threading.Event):
 def main():
     if len(sys.argv) != 2:
         print("Usage: {} /path/to/DHTservers".format(sys.argv[0]))
+        return
+
+    if os.path.isdir(sys.argv[1]):
+        print("{} is not a file".format(sys.argv[1]))
         return
 
     print("Downloading")
@@ -92,4 +97,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
