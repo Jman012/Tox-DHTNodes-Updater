@@ -23,5 +23,9 @@ chmod +x DHTservers_updater.py
 Windows
 -------
 ```
-C:\Python33\python.exe DHTservers_updater.py /path/to/DHTserver
+C:\Python33\python.exe DHTservers_updater.py %APPDATA%\..\local\tox\DHTservers
 ```
+
+Todo
+----
+* Python 2.7 Compatibility
