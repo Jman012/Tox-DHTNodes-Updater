@@ -10,14 +10,14 @@ Linux
 -----
 ```
 chmod +x DHTservers_updater.py
-./DHTservers_updater.py ~/.config/tox/DHTservers
+./DHTservers_updater.py /usr/local/share/toxic
 ```
 
 Mac OSX
 -------
 ```
 chmod +x DHTservers_updater.py
-./DHTservers_updater.py ~/Library/Application\ Support/tox/DHTservers
+./DHTservers_updater.py /usr/local/share/toxic
 ```
 
 Windows
