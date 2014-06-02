@@ -38,7 +38,7 @@ def main():
     spinner.start()
 
     try:
-        request = urllib.request.urlopen("http://wiki.tox.im/Nodes")
+        request = urllib.request.urlopen("https://wiki.tox.im/Nodes")
         raw_page = request.read().decode("utf-8")
     except urllib.error:
         print("Couldn't download")
