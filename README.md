@@ -1,7 +1,7 @@
-Tox-DHTservers-Updater
+Tox-DHTNodes-Updater
 ======================
 
-Run this to fetch the running servers from http://wiki.tox.im/Servers into your local file for Toxic, etc.
+Run this to fetch the running servers from http://wiki.tox.im/Nodes into your local file for Toxic, etc.
 
 Usage
 =====
@@ -9,21 +9,21 @@ Usage
 Linux
 -----
 ```
-chmod +x DHTservers_updater.py
+chmod +x DHTNodes_updater.py
 ./DHTservers_updater.py /usr/local/share/toxic
 ```
 
 Mac OSX
 -------
 ```
-chmod +x DHTservers_updater.py
+chmod +x DHTNodes_updater.py
 ./DHTservers_updater.py /usr/local/share/toxic
 ```
 
 Windows
 -------
 ```
-C:\Python33\python.exe DHTservers_updater.py %APPDATA%\..\local\tox\DHTservers
+C:\Python33\python.exe DHTNodes_updater.py %APPDATA%\..\local\tox\DHTservers
 ```
 
 Todo
