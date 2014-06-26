@@ -25,7 +25,7 @@ def spin(stop: threading.Event):
 
 def main():
     if len(sys.argv) != 2:
-        print("Usage: {} /path/to/DHTservers".format(sys.argv[0]))
+        print("Usage: {} /path/to/DHTnodes".format(sys.argv[0]))
         return
 
     if os.path.isdir(sys.argv[1]):
@@ -62,7 +62,7 @@ def main():
     raw_table = raw_table[raw_table.find("<tr "):]
 
     # Separate each section into a list
-    raw_server_list = []
+    raw_node_list = []
     count = raw_table.count("<tr ")
     for i in range(count):
         ipv4 = raw_table[raw_table.find("<td>") + 4:raw_table.find("</td>") - 1]
@@ -81,16 +81,16 @@ def main():
         raw_table = raw_table[raw_table.find("</td></tr>")+5:]
 
         # print(ipv4, ipv6, port, key, name, location, status)
-        raw_server_list.append("{} {} {}".format(ipv4, port, key))
+        raw_node_list.append("{} {} {}".format(ipv4, port, key))
 
     del raw_table
 
     print("Writing")
 
     # Write
-    with open(sys.argv[1], "w") as DHTservers:
-        for line in raw_server_list:
-            DHTservers.write(line + "\n")
+    with open(sys.argv[1], "w") as DHTnodes:
+        for line in raw_node_list:
+            DHTnodes.write(line + "\n")
 
     print("Success")
 
